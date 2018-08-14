@@ -7,6 +7,8 @@
 * The plot of average frequency for length (f) and the length (l) is very similar to the type y = kx^-1 which verifies the third statement of Zipf's Law which states f is inversely proportional to l.
 
 ## Answers to when and when not question
+Zipf's Law is based on statistical data which means it is not necessary that each token or instance will hold true according to the law but on an average or statistically the law holds.
+
 The Zipf's Law for meaning - 
 
 Zipf's law for meaning is valid most of the time in the case of content words but in the case of function words or stop words generally it is not valid. The frequency of stop words is generally very high but they hardly have any lexical meaning attached to them contradicting the predicted relation of frequency and meanings of words by Zipf's Law which says number of meanings is proportional to root of frequency.
