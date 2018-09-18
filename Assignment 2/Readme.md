@@ -26,7 +26,7 @@ As count of a bigram = probability of the bigram * count of its first unigram
 As such there is a little bit variation in discounting value 'd' for each frequency but the mean value turns out to be 0.9106292951975302 with a variance of 0.11676834771403574.
 
 #### Compute the perplexity value for the test dataset for the bigram model using add-1 and Good-turing. Which performs better? 
-The Good turing smoothing performs much better than Add-1 smoothing on the test dataset. This might be because add-1 smoothing results in drastic changes which decrease the probability of the bigram drastically but in the corpus still the chance of occurence of the bigram is high and hence for a lot of place add-1 ends up putting a lower probability to a bigram when it occurs frequently in the courpus. This decreases probability of sentence which increases perplexity value. This happens for almost all the high count bigrams in add-1 and hence effect is far greater. In contrast, Good Turing does not lead to such drastic changes as in add-1.
+The Good turing smoothing performs much better than Add-1 smoothing on the test dataset. Perplexity of Good Turing is 15.65 and that of add-1 is 1120.5. This might be because add-1 smoothing results in drastic changes which decrease the probability of the bigram drastically but in the corpus still the chance of occurence of the bigram is high and hence for a lot of place add-1 ends up putting a lower probability to a bigram when it occurs frequently in the courpus. This decreases probability of sentence which increases perplexity value. This happens for almost all the high count bigrams in add-1 and hence effect is far greater. In contrast, Good Turing does not lead to such drastic changes as in add-1.
 
 
 ## Arguments
@@ -80,3 +80,47 @@ The Good turing smoothing performs much better than Add-1 smoothing on the test 
 * Perplexity()
   * sentence - The processed sentence whose perplexity is to be predicted
   * mode - 0 for add-1 and 1 for Good turing
+
+
+## Return values
+* n_grams()
+  * count - dictionary of counts of the n-gram
+  * total - the total number of n-grams in corpus
+  
+* MLE_calculation()
+  * n_grams - The dictionary of MLE values of the n-grams
+  
+* conversion()
+  * d - a new data structure
+
+* next_word()
+  * word - the next word to be appended in the string
+  
+* string_Generator()
+  * string - the string which is under the process of prediction
+  
+* Generator()
+  * string - the final generated string
+  
+* Probability()
+  * p - the probability of the sentence in the log10 space
+  
+* expand_vocab()
+  * count - the dictionary of counts of the n-grams which has been expanded
+  * total - total number of n-grams observed in the old corpus
+  
+* add1_smoothed_count()
+  * a tuple of probability of the bigram and effective count in the corpus
+  
+* Frequency_of_frequencies()
+  * N - list if FOF
+  * arr - a special 2d list for optimization
+  
+* Fof_approximation()
+  * popt - the array of optimal values for f()
+  
+* GoodTuring()
+  * c - the effective count for the frequency after smoothing
+  
+* Perplexity()
+  * the perplexity value of the sentence
